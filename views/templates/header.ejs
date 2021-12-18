@@ -1,0 +1,48 @@
+<!-- Header -->
+<% if (hasBanner) { %>
+    <header class="header">
+        <a class="logo" href="/">모두의 슈즈</a>
+        <% if (!logined) { 
+            %> 
+                <div class="auth_wrapper">
+                    <a href="/auth/login">로그인</a>
+                    <a href="/auth/register">회원가입</a>
+                </div>
+            <% 
+        } %>
+
+        <% if (logined) { 
+            %> 
+                <div class="auth_wrapper">
+                    <a href="/auth/logout">로그아웃</a>
+                </div>
+            <% 
+        } %>
+    </header>
+
+    <% include ./header_script.ejs %>
+    <% } 
+%>
+
+<% if (!hasBanner) { %>
+    <header class="header_no_banner scroll_down">
+        <a class="logo" href="/">모두의 슈즈</a>
+        <% if (!logined) { 
+            %> 
+                <div class="auth_wrapper">
+                    <a href="/auth/login">로그인</a>
+                    <a href="/auth/register">회원가입</a>
+                </div>
+            <% 
+        } %>
+
+        <% if (logined) { 
+            %> 
+                <div class="auth_wrapper">
+                    <a href="/auth/logout">로그아웃</a>
+                </div>
+            <% 
+        } %>
+    </header>
+    <% } 
+%>

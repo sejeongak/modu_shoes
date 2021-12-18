@@ -1,0 +1,470 @@
+@import "reset.css";
+
+/*font*/
+/* logo */
+@font-face {
+    font-family: 'GongGothicMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10@1.0/GongGothicMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Banner Big*/
+@font-face {
+    font-family: 'paybooc-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Banner small*/
+@font-face {
+    font-family: 'paybooc-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Light.woff') format('woff');
+    
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* all */
+@font-face {
+    font-family: 'NEXON Lv2 Gothic Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Header */
+.header,
+.header_no_banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 300px;
+    transition: background 0.2s ease-in;
+}
+
+.header .logo,
+.header_no_banner .logo {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 170px;
+    min-width: 170px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'GongGothicMedium';
+}
+
+.header .auth_wrapper,
+.header_no_banner .auth_wrapper {
+    font-family: 'NEXON Lv2 Gothic Light';
+    width: 100px;
+    min-width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .auth_wrapper a,
+.header_no_banner .auth_wrapper a {
+    font-size: 12px;
+    color: #cecece;
+    cursor: pointer;
+}
+
+.header.scroll_down_in_header {
+    background-color: #1a1a1ab2;
+}
+
+.header.scroll_down,
+.header_no_banner {
+    background-color: #fdfdfd;
+    border-bottom: 1px solid #e9e9e9;
+}
+
+.header.scroll_down .logo,
+.header_no_banner .logo {
+    color: black;
+}
+
+.header.scroll_down .auth_wrapper a,
+.header_no_banner .auth_wrapper a {
+    color: #787878;
+}
+
+/* Banner */
+.banner {
+    width: 100%;
+    height: 650px;
+    padding-top: 100px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url("/images/banner2.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner .big {
+    font-family: 'paybooc-Bold';
+    font-size: 80px;
+}
+
+.banner .small {
+    font-family: 'paybooc-Light';
+    margin-top: 25px;
+    font-size: 25px;
+}
+
+/* BEST PRODUCT */
+.best {
+    width: 100%;
+    padding: 150px 300px;
+}
+
+.best .title_wrapper {
+    font-family: 'NEXON Lv2 Gothic Light';
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    min-width: 690px;
+}
+
+.best .title_wrapper .title {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.best .title_wrapper .more_product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 2px;
+    font-size: 12px;
+    background: #212224;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* PRODUCT */
+.product_wrapper {
+    font-family: 'NEXON Lv2 Gothic Light';
+    margin-top: 30px;
+    max-width: 1300px;
+    min-width: 690px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product {
+    min-width: 300px;
+    width: 300px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.product:not(:nth-child(4n)) {
+    margin-right: 33px;
+}
+
+.product .product_description_wrapper span {
+    font-size: 14px;
+    margin-bottom: 4px;
+    line-height: 28px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}
+
+.product .product_description_wrapper .product_title {
+    font-weight: bold;
+}
+
+.product .product_thumbnail_wrapper {
+    height: 300px;
+    border: 1px solid #e6e6e6;
+}
+
+.product .product_thumbnail_wrapper img {
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/nike_dunk.jpeg");
+    background-size: contain;
+}
+
+.product .product_description_wrapper {
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Auth */
+.auth {
+    font-family: 'NEXON Lv2 Gothic Light';
+    width: 100%;
+    padding: 150px 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth .title {
+    font-family: 'paybooc-Bold';
+    font-size: 45px;
+    font-weight: bold;
+    margin: 60px 0px;
+}
+
+.auth .row {
+    width: 500px;
+    min-width: 500px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.auth .alert_message {
+    display: flex;
+    padding-left: 156px;
+    color: red;
+    font-size: 12px;
+}
+
+
+.auth .row .field_label {
+    width: 120px;
+    min-width: 120px;
+    font-size: 18px;
+}
+
+.auth .row input {
+    width: 360px;
+    min-width: 360px;
+    display: inline-block;
+    padding: 19px 15px 18px;
+    vertical-align: top;
+    font-size: 18px;
+    border: 0;
+    border-bottom: 1px solid #d0d0d0;
+    border-radius: 0;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    outline: 0;
+}
+
+.auth button {
+    font-family: 'NEXON Lv2 Gothic Light';
+    width: 500px;
+    padding: 14px 0 13px;
+    color: #ffffff;
+    font-size: 18px;
+    border: 1px solid #595c66;
+    background-color: #595c66;
+    cursor: pointer;
+}
+
+.auth button.register_button {
+    margin-top: 30px;
+}
+
+/* Login */
+.find_user {
+    margin: 80px 0 20px 0;
+    width: 500px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.find_user a {
+    color: #303030;
+    cursor: pointer;
+}
+
+.find_user .bar {
+    width: 1px;
+    height: 15px;
+    background-color: rgb(201, 201, 201);
+    margin: 0px 16px;
+}
+
+/* Footer */
+.footer {
+    font-family: 'NEXON Lv2 Gothic Light';
+    width: 100%;
+    height: 260px;
+    background-color: #1a1a1a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+/* 게시판 상세보기 */
+.detail {
+    font-family: 'NEXON Lv2 Gothic Light';
+    width: 100%;
+    padding: 150px 300px;
+    min-height: 800px;
+}
+
+.detail .title_wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    min-width: 690px;
+    padding: 0px 20px;
+}
+
+.detail .title_wrapper .title {
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.detail .detail_wrapper {
+    border-top: 1px solid #e9e9e9;
+    margin-top: 16px;
+    padding: 0px 20px;
+}
+
+.detail .sub_info {
+    padding: 0px 20px;
+    margin-top: 16px;
+    color: #777777;
+}
+
+.detail .detail_wrapper {
+    padding: 20px;
+    font-size: 18px;
+    min-height: 200px;
+}
+
+.detail .button_wrapper {
+    font-family: 'NEXON Lv2 Gothic Light';
+    display: flex;
+    justify-content: flex-end;
+}
+
+.detail .button_wrapper .detail_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    outline: none;
+}
+
+.detail .button_wrapper .detail_button:first-child {
+    background: #7a1c1c;
+}
+
+.detail .button_wrapper .detail_button:last-child {
+    background: #212224;
+    margin-left: 10px;
+}
+
+/* 글 작성 */
+.release_write {
+    width: 100%;
+    padding: 150px 300px;
+    min-height: 800px;
+}
+
+.release_write .title_wrapper {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1300px;
+    min-width: 690px;
+    padding-bottom: 10px;
+}
+
+.release_write .title_wrapper .title {
+    font-family: 'paybooc-Bold';
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.release_write .release_write_wrapper {
+    font-family: 'paybooc-Light';
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15PX;
+}
+
+.release_write .release_write_wrapper input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 15px;
+    border: 1px solid #e9e9e9;
+    padding-left: 10px;
+}
+
+.release_write .release_write_wrapper textarea {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    border: 1px solid #e9e9e9;
+}
+
+.release_write .button_wrapper {
+    font-family: 'NEXON Lv2 Gothic Light';
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 15px;
+}
+
+.release_write .button_wrapper .detail_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 2px;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: #212224;
+}
+
+/* pagination */
+.pagination {
+    font-family: 'NEXON Lv2 Gothic Light';
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pagination a {
+    font-size: 30px;
+    padding: 4px;
+}
+
+.pagination a:last-child {
+    padding-right: 0;
+}

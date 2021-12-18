@@ -1,0 +1,33 @@
+<!-- REGISTER -->
+<section class="auth">
+    <div class="title">회원가입</div>
+    <form action="/auth/register" method="post">
+        <div class="row">
+            <label for="user_name" class="field_label">이름</label>
+            <input autocomplete="off" type="text" id="user_name" name="user_name" required placeholder="이름을 입력해주세요">
+        </div>
+        <div class="row">
+            <label for="user_nickname" class="field_label">닉네임</label>
+            <input autocomplete="off" type="text" id="user_nickname" name="user_nickname" required placeholder="닉네임을 입력해주세요">
+        </div>
+        <div class="row">
+            <label for="user_email" class="field_label">이메일</label>
+            <input autocomplete="off" type="email" id="user_email" name="user_email" required placeholder="이메일을 입력해주세요">
+        </div>
+        <div class="row">
+            <label for="user_id" class="field_label">아이디</label>
+            <input autocomplete="off" type="text" id="user_id" name="user_id" required placeholder="아이디를 입력해주세요">
+        </div>
+        <% if (validation === "id") { %> <span class="alert_message">중복된 아이디입니다.</span> <% } %>
+        <div class="row">
+            <label for="user_password" class="field_label">비밀번호</label>
+            <input autocomplete="off" type="password" id="user_password" name="user_password" required placeholder="비밀번호를 입력해주세요">
+        </div>
+        <div class="row">
+            <label for="user_password_check" class="field_label">비밀번호 확인</label>
+            <input autocomplete="off" type="password" id="user_password_check" name="user_password_check" required placeholder="비밀번호를 입력해주세요">
+        </div>
+        <% if (validation === "pw") { %> <span class="alert_message">비밀번호가 일치하지 않습니다.</span> <% } %>
+        <button type="submit" class="register_button"><strong>회원가입</strong></button>
+    </form>
+</section>

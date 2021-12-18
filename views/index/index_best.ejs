@@ -1,0 +1,25 @@
+<!-- BEST PRODUCT -->
+<section class="best">
+    <div class="title_wrapper">
+        <div class="title">BEST PRODUCT</div>
+        <a href="/release" class="more_product">MORE PRODUCT</a>
+    </div>
+    <div class="product_wrapper">
+        <% releases.forEach((release) => { 
+            const link = `/release/${release.release_idx}`;
+            const title = release.release_title;
+            const content = release.release_content;
+            %> 
+                <a href="<%= link %>" class="product">
+                    <div class="product_thumbnail_wrapper">
+                        <img />
+                    </div>
+                    <div class="product_description_wrapper">
+                        <span class="location" title="<%= title %>"><%= title %></span>
+                        <span class="product_title" title="<%= content %>"><%= content %></span>
+                    </div>
+                </a>
+            <% 
+        })%>
+    </div>
+</section>

@@ -1,0 +1,23 @@
+<!-- BEST PRODUCT -->
+<section class="detail">
+    <div class="title_wrapper">
+        <div class="title"><%= detail.release_title %></div>
+    </div>
+    <div class="sub_info">
+        <span>작성자: <%= detail.user_id %></span>
+        &nbsp;/&nbsp;
+        <span>작성일: <%= detail.reg_date %></span>
+    </div>
+    <div class="detail_wrapper">
+        <%= detail.release_content %>
+    </div>
+    <div class="button_wrapper">
+        <% if (isMine) { 
+                %> 
+                    <button class="detail_button">삭제</button>
+                    <button class="detail_button">수정</button>
+                <% 
+            } 
+        %>
+    </div>
+</section>

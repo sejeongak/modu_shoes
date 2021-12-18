@@ -1,0 +1,17 @@
+<script>
+    const best = document.querySelector(".best");
+    const header = document.querySelector(".header");
+
+    document.addEventListener("scroll", () => {
+        if (document.documentElement.scrollTop > 100 && document.documentElement.scrollTop <= 450) {
+            header.classList.add("scroll_down_in_header");
+            header.classList.remove("scroll_down");
+        } else if (document.documentElement.scrollTop > 550) {
+            header.classList.add("scroll_down");
+            header.classList.remove("scroll_down_in_header");
+        } else {
+            header.classList.remove("scroll_down");
+            header.classList.remove("scroll_down_in_header");
+        }
+    });
+</script>

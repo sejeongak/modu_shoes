@@ -1,0 +1,15 @@
+<!-- 발매 정보 글쓰기 -->
+<section class="release_write">
+    <div class="title_wrapper">
+        <div class="title">발매 정보 등록</div>
+    </div>
+    <form action="/release/create" method="post">
+        <div class="release_write_wrapper">
+            <input autocomplete="off" type="text" name="release_title" placeholder="제목을 입력해주세요" required>
+            <textarea autocomplete="off" name="release_content" placeholder="내용을 입력해주세요" required></textarea>
+        </div>
+        <div class="button_wrapper">
+            <button type="submit" class="detail_button">등록</button>
+        </div>
+    </form>
+</section>
