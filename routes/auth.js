@@ -10,19 +10,19 @@ let db = new sqlite3.Database('./db/modu.db', sqlite3.OPEN_READWRITE, (err) => {
 });
 
 // 회원가입 입성!!!
-router.get("/register", function (req, res, next) {
+router.get("/signin", function (req, res, next) {
     const logined = req.session ? req.session.logined : false;
-    res.render('register', { hasBanner: false, logined, validation: "" });
+    res.render('signin', { hasBanner: false, logined, validation: "" });
 });
 
 // 회원가입!!!!!
-router.post('/register', function (req, res, next) {
+router.post('/signin', function (req, res, next) {
     const logined = req.session ? req.session.logined : false;
     const { user_name, user_email, user_id, user_password, user_password_check, user_nickname } = req.body;
     const insertQuery = `insert into user(user_name, user_email,user_nickname, user_id, user_password) values ('${user_name}', '${user_email}','${user_nickname}', '${user_id}', '${user_password}')`;
 
     if (user_password !== user_password_check) {
-        res.render('register', { hasBanner: false, logined, validation: "pw" });
+        res.render('signin', { hasBanner: false, logined, validation: "pw" });
     } else {
         db.run(insertQuery, err => {
             if (err) return console.error(err.message);

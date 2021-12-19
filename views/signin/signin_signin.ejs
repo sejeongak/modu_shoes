@@ -1,7 +1,7 @@
-<!-- REGISTER -->
+<!-- SIGNIN -->
 <section class="auth">
     <div class="title">회원가입</div>
-    <form action="/auth/register" method="post">
+    <form action="/auth/signin" method="post">
         <div class="row">
             <label for="user_name" class="field_label">이름</label>
             <input autocomplete="off" type="text" id="user_name" name="user_name" required placeholder="이름을 입력해주세요">
@@ -28,6 +28,6 @@
             <input autocomplete="off" type="password" id="user_password_check" name="user_password_check" required placeholder="비밀번호를 입력해주세요">
         </div>
         <% if (validation === "pw") { %> <span class="alert_message">비밀번호가 일치하지 않습니다.</span> <% } %>
-        <button type="submit" class="register_button"><strong>회원가입</strong></button>
+        <button type="submit" class="signin_button"><strong>회원가입</strong></button>
     </form>
 </section>

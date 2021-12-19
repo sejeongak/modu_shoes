@@ -281,7 +281,7 @@
     cursor: pointer;
 }
 
-.auth button.register_button {
+.auth button.signin_button {
     margin-top: 30px;
 }
 
